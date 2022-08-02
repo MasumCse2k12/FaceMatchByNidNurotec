@@ -1,0 +1,2 @@
+Product revision number: 20191024
+Product revision hash: 15c42aded3ce06f92f387e265dd5e4c6e2402dda

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>NFaceVerificationClient 11.2</string>
+	<key>CFBundleExecutable</key>
+	<string>NFaceVerificationClient</string>
+	<key>CFBundleGetInfoString</key>
+	<string>NFaceVerificationClient 11.2</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.neurotec.NFaceVerificationClient</string>
+	<key>CFBundleName</key>
+	<string>NFaceVerificationClient</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleShortVersionString</key>
+	<string>11.2</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>11.2</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.9.0</string>
+	<key>NSHumanReadableCopyright</key>
+	<string></string>
+</dict>
+</plist>

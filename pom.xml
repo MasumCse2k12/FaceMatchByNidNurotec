@@ -1,0 +1,136 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.neurotec</groupId>
+	<artifactId>neurotec-face-verification-component-installer</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<name>${project.artifactId}</name>
+
+	<organization>
+		<name>Neurotechnology</name>
+		<url>www.neurotechnology.com</url>
+	</organization>
+
+	<properties>
+		<product.root.directory>${basedir}</product.root.directory>
+		<product.bin.directory>${product.root.directory}/Bin</product.bin.directory>
+		<product.bin.directory.java>${product.bin.directory}/Java</product.bin.directory.java>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>development</id>
+			<activation>
+				<file>
+					<exists>${basedir}/../../../../Editions</exists>
+				</file>
+			</activation>
+			<properties>
+				<product.root.directory>${basedir}/../../../..</product.root.directory>
+			</properties>
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.3.1</version>
+				<executions>
+					<execution>
+						<id>install jna</id>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<phase>validate</phase>
+						<configuration>
+							<file>${product.bin.directory.java}/jna.jar</file>
+							<groupId>net.java.dev.jna</groupId>
+							<artifactId>jna</artifactId>
+							<version>4.5.0</version>
+							<packaging>jar</packaging>
+							<generatePom>true</generatePom>
+						</configuration>
+					</execution>
+					<execution>
+						<id>install neurotec-face-verification-client</id>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<phase>validate</phase>
+						<configuration>
+							<file>${product.bin.directory.java}/neurotec-face-verification-client.jar</file>
+							<groupId>com.neurotec</groupId>
+							<artifactId>neurotec-face-verification-client</artifactId>
+							<version>11.2.0.0</version>
+							<packaging>jar</packaging>
+							<generatePom>true</generatePom>
+						</configuration>
+					</execution>
+					<execution>
+						<id>install neurotec-face-verification-client-javadoc</id>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<phase>validate</phase>
+						<configuration>
+							<file>${product.bin.directory.java}/neurotec-face-verification-client-javadoc.jar</file>
+							<groupId>com.neurotec</groupId>
+							<artifactId>neurotec-face-verification-client</artifactId>
+							<version>11.2.0.0</version>
+							<packaging>javadoc</packaging>
+							<generatePom>true</generatePom>
+						</configuration>
+					</execution>
+					<execution>
+						<id>install face-verification-rest-client</id>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<phase>validate</phase>
+						<configuration>
+							<file>${product.bin.directory.java}/face-verification-rest-client.jar</file>
+							<groupId>com.neurotec</groupId>
+							<artifactId>face-verification-rest-client</artifactId>
+							<version>11.0.0.0</version>
+							<packaging>jar</packaging>
+							<generatePom>true</generatePom>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-install-plugin</artifactId>
+										<versionRange>[2.3.1,)</versionRange>
+										<goals>
+											<goal>install-file</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

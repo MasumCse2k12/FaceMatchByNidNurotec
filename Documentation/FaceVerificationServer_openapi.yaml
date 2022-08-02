@@ -1,0 +1,172 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Neurotechnology Face Verification Server API
+  description: Server API that can be used for FaceVerificationClient operation registration. For trial purposes 9tlitadjedrg1emf9e27d0dlkt auth token may be used.
+servers:
+  - url: https://faceverification.neurotechnology.com/rs/
+    description: Trial service.
+paths:
+  /transactions-capacity-update:
+    post:
+      summary: Update server capacity using update file received from Neurotechnology.
+      operationId: transactionCapacityUpdate
+      tags:
+        - update
+      requestBody:
+        description: InputArray of update file received from Neurotechnology.
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: Status indicating current capacity update status.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UpdateStatus"
+        '400':
+          description: Invalid request blob was provided.
+        '500':
+          description: Server was unable to validate the operation.
+        default:
+          description: unexpected error
+      security:
+        - authToken: []
+  /transactions-capacity-update/status:
+    get:
+      summary: Get current transaction capacity update status.
+      operationId: updateStatus
+      tags:
+        - update
+      responses:
+        '200':
+          description: Expected response to a valid request.
+          content:
+            application/json:
+              schema:
+                  $ref: "#/components/schemas/UpdateStatus"
+        default:
+          description: unexpected error
+      security:
+        - authToken: []
+  /validate:
+    post:
+      summary: Validate operation to allow further processing on client side.
+      operationId: validate
+      tags:
+        - operation
+      requestBody:
+        description: InputArray of operation registration key that was received from one of FaceVerificationClient CreateTemplate, CheckLiveness ir Import functions
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: OutputArray that has to be passed to FinishOperation function in the FaceVerificationClient SDK
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        '400':
+          description: Invalid request blob was provided.
+        '500':
+          description: Server was unable to validate the operation. Possibly because the operation limit was reached.
+        default:
+          description: unexpected error
+      security:
+        - authToken: []
+  /usage:
+    get:
+      summary: Get operation usage and limits information.
+      operationId: usage
+      tags:
+        - usage
+      responses:
+        '200':
+          description: Expected response to a valid request.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Usage"
+        default:
+          description: unexpected error
+      security:
+        - authToken: []
+  /health:
+    get:
+      summary: Get dongle health status.
+      operationId: health
+      tags:
+        - health
+      responses:
+        '200':
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Health"
+        default:
+          description: unexpected error
+      security:
+        - authToken: []
+components:
+  securitySchemes:
+    authToken:
+      type: apiKey
+      in: header
+      name: X-Auth-token
+  schemas:
+    UpdateStatus:
+      properties:
+        status:
+          type: string
+          enum:
+          - NONE
+          - FAILED
+          - QUEUED
+          - IN_PROGRESS
+          - DONE
+    Usage:
+      properties:
+        used:
+          type: integer
+          format: int32
+        limit:
+          type: integer
+          format: int32
+        remaining:
+          type: integer
+          format: int32
+        operation:
+          type: string
+          enum:
+          - CREATE_TEMPLATE
+          - LIVENESS_CHECK
+    Health:
+      properties:
+        hardwareId:
+          type: integer
+          format: int32
+        dongleId:
+          type: integer
+          format: int32
+        applicationId:
+          type: integer
+          format: int32
+        status:
+          type: string
+          enum:
+          - OK
+          - BAD_APPLICATION_ID
+          - IO_ERROR
+          - BAD_INSTALLATION_ID

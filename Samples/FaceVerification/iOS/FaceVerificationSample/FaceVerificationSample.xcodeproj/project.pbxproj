@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DEDF0BF1CD9E5C5007E48F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEDF0BE1CD9E5C5007E48F7 /* main.m */; };
+		2DEDF0C21CD9E5C5007E48F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEDF0C11CD9E5C5007E48F7 /* AppDelegate.m */; };
+		2DEDF0C51CD9E5C5007E48F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEDF0C41CD9E5C5007E48F7 /* ViewController.m */; };
+		2DEDF0C81CD9E5C5007E48F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEDF0C61CD9E5C5007E48F7 /* Main.storyboard */; };
+		2DEDF0CA1CD9E5C5007E48F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DEDF0C91CD9E5C5007E48F7 /* Assets.xcassets */; };
+		2DEDF0CD1CD9E5C5007E48F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEDF0CB1CD9E5C5007E48F7 /* LaunchScreen.storyboard */; };
+		9F47BE3721BE5E8100722290 /* NFaceVerificationClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F47BE3621BE5E8000722290 /* NFaceVerificationClient.framework */; };
+		9F47BE3921BE5E8800722290 /* NFaceVerificationClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F47BE3621BE5E8000722290 /* NFaceVerificationClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F47BE3F21BE71FC00722290 /* SettingsSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47BE3D21BE71FC00722290 /* SettingsSliderCell.m */; };
+		9F47BE4021BE71FC00722290 /* SettingsSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F47BE3E21BE71FC00722290 /* SettingsSliderCell.xib */; };
+		9F47BE4721BE87D700722290 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47BE4621BE87D700722290 /* Settings.m */; };
+		9F47BE4C21BE8D1000722290 /* SettingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47BE4B21BE8D1000722290 /* SettingHandler.m */; };
+		9F47BE5521BFB2C300722290 /* SettingsSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47BE5321BFB2C300722290 /* SettingsSwitchCell.m */; };
+		9F47BE5721BFB6E500722290 /* SettingsSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F47BE5621BFB6E500722290 /* SettingsSwitchCell.xib */; };
+		9F47BE5A21BFCA1800722290 /* APISettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47BE5921BFCA1800722290 /* APISettings.m */; };
+		9F47BE5E21BFD0A000722290 /* SettingsTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47BE5C21BFD0A000722290 /* SettingsTitleCell.m */; };
+		9F47BE5F21BFD0A000722290 /* SettingsTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F47BE5D21BFD0A000722290 /* SettingsTitleCell.xib */; };
+		9F47BE6321BFDAEA00722290 /* SettingsPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47BE6021BFDAEA00722290 /* SettingsPickerCell.m */; };
+		9F47BE6421BFDAEA00722290 /* SettingsPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F47BE6121BFDAEA00722290 /* SettingsPickerCell.xib */; };
+		9F79F4AE21B15FA3000112C9 /* SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F79F4AD21B15FA3000112C9 /* SettingsView.m */; };
+		9F79F4B821B18703000112C9 /* FaceVerification.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 9F79F4B621B18703000112C9 /* FaceVerification.ndf */; };
+		9F79F4B921B18703000112C9 /* FaceVerificationIcao.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 9F79F4B721B18703000112C9 /* FaceVerificationIcao.ndf */; };
+		9FCE301421B00A9D00544226 /* DBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCE301321B00A9D00544226 /* DBConnection.m */; };
+		DB6789EC1D10143100EF755E /* FaceOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6789EB1D10143100EF755E /* FaceOverlayView.m */; };
+		DB747A571D0FE578008306EF /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB747A561D0FE578008306EF /* FaceView.m */; };
+		DB93BF841CF6EA6F007AAE28 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DB93BF831CF6EA6F007AAE28 /* Utils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F79F4A521B14B8E000112C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9F47BE3921BE5E8800722290 /* NFaceVerificationClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2DEDF0BA1CD9E5C5007E48F7 /* FaceVerificationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceVerificationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DEDF0BE1CD9E5C5007E48F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2DEDF0C01CD9E5C5007E48F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2DEDF0C11CD9E5C5007E48F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2DEDF0C31CD9E5C5007E48F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2DEDF0C41CD9E5C5007E48F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2DEDF0C71CD9E5C5007E48F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2DEDF0C91CD9E5C5007E48F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DEDF0CC1CD9E5C5007E48F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DEDF0CE1CD9E5C5007E48F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F47BE3621BE5E8000722290 /* NFaceVerificationClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NFaceVerificationClient.framework; path = ../../../../Frameworks/iOS/NFaceVerificationClient.framework; sourceTree = "<group>"; };
+		9F47BE3C21BE71FC00722290 /* SettingsSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsSliderCell.h; sourceTree = "<group>"; };
+		9F47BE3D21BE71FC00722290 /* SettingsSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsSliderCell.m; sourceTree = "<group>"; };
+		9F47BE3E21BE71FC00722290 /* SettingsSliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsSliderCell.xib; sourceTree = "<group>"; };
+		9F47BE4621BE87D700722290 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		9F47BE4A21BE8CFD00722290 /* SettingHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingHandler.h; sourceTree = "<group>"; };
+		9F47BE4B21BE8D1000722290 /* SettingHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingHandler.m; sourceTree = "<group>"; };
+		9F47BE5121BFB2C300722290 /* SettingsSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsSwitchCell.h; sourceTree = "<group>"; };
+		9F47BE5321BFB2C300722290 /* SettingsSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsSwitchCell.m; sourceTree = "<group>"; };
+		9F47BE5621BFB6E500722290 /* SettingsSwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsSwitchCell.xib; sourceTree = "<group>"; };
+		9F47BE5821BFC0C000722290 /* APISettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APISettings.h; sourceTree = "<group>"; };
+		9F47BE5921BFCA1800722290 /* APISettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APISettings.m; sourceTree = "<group>"; };
+		9F47BE5B21BFD0A000722290 /* SettingsTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTitleCell.h; sourceTree = "<group>"; };
+		9F47BE5C21BFD0A000722290 /* SettingsTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTitleCell.m; sourceTree = "<group>"; };
+		9F47BE5D21BFD0A000722290 /* SettingsTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTitleCell.xib; sourceTree = "<group>"; };
+		9F47BE6021BFDAEA00722290 /* SettingsPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsPickerCell.m; sourceTree = "<group>"; };
+		9F47BE6121BFDAEA00722290 /* SettingsPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsPickerCell.xib; sourceTree = "<group>"; };
+		9F47BE6221BFDAEA00722290 /* SettingsPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPickerCell.h; sourceTree = "<group>"; };
+		9F79F4AC21B15F8D000112C9 /* SettingsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsView.h; sourceTree = "<group>"; };
+		9F79F4AD21B15FA3000112C9 /* SettingsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsView.m; sourceTree = "<group>"; };
+		9F79F4AF21B173D7000112C9 /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		9F79F4B621B18703000112C9 /* FaceVerification.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FaceVerification.ndf; path = ../../../../Bin/Data/FaceVerification.ndf; sourceTree = "<group>"; };
+		9F79F4B721B18703000112C9 /* FaceVerificationIcao.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FaceVerificationIcao.ndf; path = ../../../../Bin/Data/FaceVerificationIcao.ndf; sourceTree = "<group>"; };
+		9FCE301221B0089800544226 /* DBConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBConnection.h; sourceTree = "<group>"; };
+		9FCE301321B00A9D00544226 /* DBConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBConnection.m; sourceTree = "<group>"; };
+		DB6789EA1D10143100EF755E /* FaceOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceOverlayView.h; sourceTree = "<group>"; };
+		DB6789EB1D10143100EF755E /* FaceOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceOverlayView.m; sourceTree = "<group>"; };
+		DB747A551D0FE578008306EF /* FaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
+		DB747A561D0FE578008306EF /* FaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
+		DB93BF831CF6EA6F007AAE28 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		DB93BF851CF6EAC1007AAE28 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DEDF0B71CD9E5C5007E48F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F47BE3721BE5E8100722290 /* NFaceVerificationClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DEDF0B11CD9E5C5007E48F7 = {
+			isa = PBXGroup;
+			children = (
+				DB93BF861CF714D1007AAE28 /* Resources */,
+				DB93BF801CF6E44A007AAE28 /* Frameworks */,
+				2DEDF0BC1CD9E5C5007E48F7 /* FaceVerificationSample */,
+				2DEDF0BB1CD9E5C5007E48F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DEDF0BB1CD9E5C5007E48F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DEDF0BA1CD9E5C5007E48F7 /* FaceVerificationSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DEDF0BC1CD9E5C5007E48F7 /* FaceVerificationSample */ = {
+			isa = PBXGroup;
+			children = (
+				9F47BE3B21BE71FC00722290 /* View */,
+				2DEDF0C01CD9E5C5007E48F7 /* AppDelegate.h */,
+				2DEDF0C11CD9E5C5007E48F7 /* AppDelegate.m */,
+				2DEDF0C31CD9E5C5007E48F7 /* ViewController.h */,
+				2DEDF0C41CD9E5C5007E48F7 /* ViewController.m */,
+				DB93BF851CF6EAC1007AAE28 /* Utils.h */,
+				DB93BF831CF6EA6F007AAE28 /* Utils.m */,
+				DB6789EA1D10143100EF755E /* FaceOverlayView.h */,
+				DB6789EB1D10143100EF755E /* FaceOverlayView.m */,
+				DB747A551D0FE578008306EF /* FaceView.h */,
+				DB747A561D0FE578008306EF /* FaceView.m */,
+				2DEDF0C61CD9E5C5007E48F7 /* Main.storyboard */,
+				2DEDF0C91CD9E5C5007E48F7 /* Assets.xcassets */,
+				2DEDF0CB1CD9E5C5007E48F7 /* LaunchScreen.storyboard */,
+				2DEDF0CE1CD9E5C5007E48F7 /* Info.plist */,
+				2DEDF0BD1CD9E5C5007E48F7 /* Supporting Files */,
+				9FCE301221B0089800544226 /* DBConnection.h */,
+				9FCE301321B00A9D00544226 /* DBConnection.m */,
+				9F79F4AC21B15F8D000112C9 /* SettingsView.h */,
+				9F79F4AD21B15FA3000112C9 /* SettingsView.m */,
+				9F79F4AF21B173D7000112C9 /* Settings.h */,
+				9F47BE4621BE87D700722290 /* Settings.m */,
+				9F47BE4A21BE8CFD00722290 /* SettingHandler.h */,
+				9F47BE4B21BE8D1000722290 /* SettingHandler.m */,
+				9F47BE5821BFC0C000722290 /* APISettings.h */,
+				9F47BE5921BFCA1800722290 /* APISettings.m */,
+			);
+			path = FaceVerificationSample;
+			sourceTree = "<group>";
+		};
+		2DEDF0BD1CD9E5C5007E48F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2DEDF0BE1CD9E5C5007E48F7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F47BE3B21BE71FC00722290 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F47BE6221BFDAEA00722290 /* SettingsPickerCell.h */,
+				9F47BE6021BFDAEA00722290 /* SettingsPickerCell.m */,
+				9F47BE6121BFDAEA00722290 /* SettingsPickerCell.xib */,
+				9F47BE5B21BFD0A000722290 /* SettingsTitleCell.h */,
+				9F47BE5C21BFD0A000722290 /* SettingsTitleCell.m */,
+				9F47BE5D21BFD0A000722290 /* SettingsTitleCell.xib */,
+				9F47BE5121BFB2C300722290 /* SettingsSwitchCell.h */,
+				9F47BE5321BFB2C300722290 /* SettingsSwitchCell.m */,
+				9F47BE5621BFB6E500722290 /* SettingsSwitchCell.xib */,
+				9F47BE3C21BE71FC00722290 /* SettingsSliderCell.h */,
+				9F47BE3D21BE71FC00722290 /* SettingsSliderCell.m */,
+				9F47BE3E21BE71FC00722290 /* SettingsSliderCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB93BF801CF6E44A007AAE28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F47BE3621BE5E8000722290 /* NFaceVerificationClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB93BF861CF714D1007AAE28 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F79F4B621B18703000112C9 /* FaceVerification.ndf */,
+				9F79F4B721B18703000112C9 /* FaceVerificationIcao.ndf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DEDF0B91CD9E5C5007E48F7 /* FaceVerificationSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DEDF0D11CD9E5C5007E48F7 /* Build configuration list for PBXNativeTarget "FaceVerificationSample" */;
+			buildPhases = (
+				2DEDF0B61CD9E5C5007E48F7 /* Sources */,
+				2DEDF0B71CD9E5C5007E48F7 /* Frameworks */,
+				2DEDF0B81CD9E5C5007E48F7 /* Resources */,
+				9F79F4A521B14B8E000112C9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceVerificationSample;
+			productName = FaceVerificationSample;
+			productReference = 2DEDF0BA1CD9E5C5007E48F7 /* FaceVerificationSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DEDF0B21CD9E5C5007E48F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Neurotechnology;
+				TargetAttributes = {
+					2DEDF0B91CD9E5C5007E48F7 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 2DEDF0B51CD9E5C5007E48F7 /* Build configuration list for PBXProject "FaceVerificationSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DEDF0B11CD9E5C5007E48F7;
+			productRefGroup = 2DEDF0BB1CD9E5C5007E48F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DEDF0B91CD9E5C5007E48F7 /* FaceVerificationSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DEDF0B81CD9E5C5007E48F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F79F4B821B18703000112C9 /* FaceVerification.ndf in Resources */,
+				9F47BE5F21BFD0A000722290 /* SettingsTitleCell.xib in Resources */,
+				9F47BE5721BFB6E500722290 /* SettingsSwitchCell.xib in Resources */,
+				2DEDF0CD1CD9E5C5007E48F7 /* LaunchScreen.storyboard in Resources */,
+				2DEDF0CA1CD9E5C5007E48F7 /* Assets.xcassets in Resources */,
+				9F47BE4021BE71FC00722290 /* SettingsSliderCell.xib in Resources */,
+				2DEDF0C81CD9E5C5007E48F7 /* Main.storyboard in Resources */,
+				9F47BE6421BFDAEA00722290 /* SettingsPickerCell.xib in Resources */,
+				9F79F4B921B18703000112C9 /* FaceVerificationIcao.ndf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DEDF0B61CD9E5C5007E48F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6789EC1D10143100EF755E /* FaceOverlayView.m in Sources */,
+				9F79F4AE21B15FA3000112C9 /* SettingsView.m in Sources */,
+				2DEDF0C51CD9E5C5007E48F7 /* ViewController.m in Sources */,
+				9F47BE6321BFDAEA00722290 /* SettingsPickerCell.m in Sources */,
+				9F47BE5521BFB2C300722290 /* SettingsSwitchCell.m in Sources */,
+				9F47BE4721BE87D700722290 /* Settings.m in Sources */,
+				2DEDF0C21CD9E5C5007E48F7 /* AppDelegate.m in Sources */,
+				9F47BE5A21BFCA1800722290 /* APISettings.m in Sources */,
+				9F47BE3F21BE71FC00722290 /* SettingsSliderCell.m in Sources */,
+				9F47BE4C21BE8D1000722290 /* SettingHandler.m in Sources */,
+				DB747A571D0FE578008306EF /* FaceView.m in Sources */,
+				2DEDF0BF1CD9E5C5007E48F7 /* main.m in Sources */,
+				9F47BE5E21BFD0A000722290 /* SettingsTitleCell.m in Sources */,
+				DB93BF841CF6EA6F007AAE28 /* Utils.m in Sources */,
+				9FCE301421B00A9D00544226 /* DBConnection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2DEDF0C61CD9E5C5007E48F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DEDF0C71CD9E5C5007E48F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2DEDF0CB1CD9E5C5007E48F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DEDF0CC1CD9E5C5007E48F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DEDF0CF1CD9E5C5007E48F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2DEDF0D01CD9E5C5007E48F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DEDF0D21CD9E5C5007E48F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = ../../../../Frameworks/iOS;
+				INFOPLIST_FILE = FaceVerificationSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.neurotec.FaceVerificationSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2DEDF0D31CD9E5C5007E48F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = ../../../../Frameworks/iOS;
+				INFOPLIST_FILE = FaceVerificationSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.neurotec.FaceVerificationSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DEDF0B51CD9E5C5007E48F7 /* Build configuration list for PBXProject "FaceVerificationSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DEDF0CF1CD9E5C5007E48F7 /* Debug */,
+				2DEDF0D01CD9E5C5007E48F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DEDF0D11CD9E5C5007E48F7 /* Build configuration list for PBXNativeTarget "FaceVerificationSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DEDF0D21CD9E5C5007E48F7 /* Debug */,
+				2DEDF0D31CD9E5C5007E48F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DEDF0B21CD9E5C5007E48F7 /* Project object */;
+}
